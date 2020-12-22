@@ -69,7 +69,7 @@ for rec in SeqIO.parse(unarchived1, "genbank"):
                     codonAlign = ""
                     while len(alignmentProteinList) > 0:
                         if alignmentProteinList[0] == "-":
-                            codonAlign += "-"
+                            codonAlign += "---"
                             alignmentProteinList = alignmentProteinList[1::]
                         else:
                             codon = featureSeq[0:3]
