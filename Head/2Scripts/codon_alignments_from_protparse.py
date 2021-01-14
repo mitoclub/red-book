@@ -72,6 +72,8 @@ for rec in SeqIO.parse(unarchived1, "genbank"):
                             codonAlign += "---"
                             alignmentProteinList = alignmentProteinList[1::]
                         else:
+                            if len(featureSeq)<3:
+                                print(speciesName)
                             codon = featureSeq[0:3]
                             codonAlign += codon
                             featureSeq = featureSeq[3::]
